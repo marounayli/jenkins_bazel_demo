@@ -14,7 +14,7 @@ pipeline {
                 script{
                     sh 'sleep 7'
                     sh 'echo ehfweu'
-                    publishChecks name: 'TestCheck', title: 'Test Check', summary: 'Calling Bazel test on the repo'
+                    publishChecks name: 'TestCheck', title: 'Test Check', summary: 'Calling Bazel testt on the repo'
                 }
             }
         }
@@ -23,6 +23,7 @@ pipeline {
             steps {
                 script{
                 try{
+                echo 'testDeploy'
                 sh 'sleep 7'
                 sh 'echo deploying'
                 publishChecks name : 'DeployCheck' , title: 'Deployment Check', summary :'Deploying the build artifacts' 
